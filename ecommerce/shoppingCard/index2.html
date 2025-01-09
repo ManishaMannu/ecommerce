@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    /*haeder*/
+#header-v{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index:999;
+    position: sticky;
+    top:0;
+    left:0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+</style>
+<body>
+    <section id="header-v">
+        <a href="#"><img src="loho4.png" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="../all/index2.html">Home</a></li>
+                <li><a class="active" href="/shoppingCard/index.html">Shop</a></li>
+                <li><a href="../all/blog.html">Blog</a></li>
+                <li><a href="../all/about.html">About</a></li>
+                <li><a href="../all/contact.html">Contact</a></li>
+                
+                <li><a href="../all/lol.html"><button class="normal">LOGIN</button></a></li>
+        </div>
+        </section>
+
+
+
+    <div class="container">
+        <header>
+            <h1>Shopping</h1>
+            <div class="shopping">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list"></div>
+    </div>
+
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input types="text" placeholder="Your E-mail address">
+            <button class="normal">Sign Up</button>
+        </div>
+     </section>
+
+    <footer class="section-p1"> 
+        <div class="col">
+            <img  class="logo" src="loho3.jpg" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 35/C N.I.T-5 FARIDABAD, HARYANA</p>
+            <p><strong>Phone:</strong> +919811654329</p>
+            <p><strong>Hours:</strong>11:00-8:00,Mon-Sat </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                   <i class="fab fa-facebook-f"></i>
+                   <i class="fab fa-twitter"></i>
+                   <i class="fab fa-instagram"></i>
+                   <i class="fab fa-pinterest-p"></i>
+                   <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install</h4>
+            <p>From App store or Goggle Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Ecommerce Website. All rights reserved.</p>
+        </div>
+    
+     </footer>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>

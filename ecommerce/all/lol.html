@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    
+
+    .container-p {
+      width: 100%;
+      max-width: 400px;
+      margin: 100px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: black;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color:  #088178;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .switch a {
+      text-decoration: none;
+      color:  #088178;
+      cursor: pointer;
+    }
+  </style>
+  <title>Login and Signup</title>
+</head>
+<body>
+  <section id="header">
+    <a href="#"><img src="img/loho4.png" alt="" class="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="../shoppingCard/index.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+            <li><a class="active" href="lol.html"><button class="normal">LOGIN</button></a></li>
+        </ul>
+    </div>
+</section>
+
+<div class="container-p">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" name="loginUsername" required>
+
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="loginPassword" required>
+
+    <button type="button" onclick="login()">Login</button>
+  </form>
+
+  <div class="switch">
+    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+  </div>
+</div>
+
+<div class="container-p" style="display: none;" id="signupContainer">
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <label for="signupUsername">Username:</label>
+    <input type="text" id="signupUsername" name="signupUsername" required>
+
+    <label for="signupEmail">Email</label>
+    <input type="text" id="signupEmail" name="signupEmail" required>
+
+    <label for="signupphonenumber">Phone no:</label>
+    <input type="text" id="signupUsername" name="signupphonenumer" required>
+
+    <label for="signupPassword">Password:</label>
+    <input type="password" id="signupPassword" name="signupPassword" required>
+
+    <button type="button" onclick="signup()">Sign Up</button>
+  </form>
+
+  <div class="switch">
+    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+  </div>
+</div>
+
+<section id="newsletter" class="section-p1 section-m1">
+  <div class="newstext">
+      <h4>Sign Up for Newsletter</h4>
+      <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+  </div>
+  <div class="form">
+      <input types="text" placeholder="Your E-mail address">
+      <button class="normal">Sign Up</button>
+  </div>
+</section>
+
+<footer class="section-p1"> 
+  <div class="col">
+      <img  class="logo" src="img/loho3.jpg" alt="">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> 35/C N.I.T-5 FARIDABAD, HARYANA</p>
+      <p><strong>Phone:</strong> +919811654329</p>
+      <p><strong>Hours:</strong>11:00-8:00,Mon-Sat </p>
+      <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+             <i class="fab fa-facebook-f"></i>
+             <i class="fab fa-twitter"></i>
+             <i class="fab fa-instagram"></i>
+             <i class="fab fa-pinterest-p"></i>
+             <i class="fab fa-youtube"></i>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact us</a>
+  </div>
+
+  <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+  </div>
+
+  <div class="col install">
+      <h4>Install</h4>
+      <p>From App store or Goggle Play</p>
+      <div class="row">
+          <img src="img/app.jpg" alt="">
+          <img src="img/play.jpg" alt="">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="img/pay.png" alt="">
+  </div>
+  <div class="copyright">
+      <p>&copy; 2023 Ecommerce Website. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+<script>
+  function toggleForm() {
+    document.getElementById('loginForm').reset();
+    document.getElementById('signupForm').reset();
+    document.getElementById('signupContainer').style.display = (document.getElementById('signupContainer').style.display === 'none') ? 'block' : 'none';
+    document.getElementById('loginContainer').style.display = (document.getElementById('loginContainer').style.display === 'none') ? 'block' : 'none';
+  }
+
+  function login() {
+    // Add login functionality here
+    alert('Login button clicked');
+  }
+
+  function signup() {
+    // Add signup functionality here
+    alert('Sign Up button clicked');
+  }
+</script>
+
+</body>
+</html>
